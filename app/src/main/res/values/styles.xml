@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#BA68C8</item>
+        <item name="colorPrimaryDark">#4A148C</item>
+        <item name="colorAccent">#D500F9</item>
+        <item name="colorButtonNormal">#8E24AA</item>
+    </style>
+
+    <style name="questionTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+
+    </style>
+    <style name="welcome_message">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">#CE93D8</item>
+        <item name="android:textColor">#F3E5F5</item>
+    </style>
+
+    <style name="description_style" parent="welcome_message">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="checkbox_style">
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+
+    </style>
+
+    <style name="radiobutton_style">
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:textColor">#F3E5F5</item>
+    </style>
+
+</resources>

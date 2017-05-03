@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">AndreicasQuizzApp</string>
+    <string name="welcome">Welcome to Andreica\'s Quiz! </string>
+    <string name="description">Check your knowledge of android development by answering the 5 questions below. </string>
+    <string name="user_name">Type your name here</string>
+    <string name="question_1_text">1. What syntax is used in order to call a method on a java object?</string>
+    <string name="answer_1a">methodName.ObjectVariableName</string>
+    <string name="answer_1b">ObjectVariableName.methodName (Input Arguments)</string>
+    <string name="answer_1c">ObjectVariableName.methodName = inputArguments</string>
+    <string name="question_2_text">2. Which of the following is a correct example when casting an Object? \nPlease select all that apply</string>
+    <string name="answer_2a">CheckBox checkBoxName = (CheckBox)findViewById (R.id.checkbox_id)</string>
+    <string name="answer_2b">CheckBox checkBoxName = findViewById (R.id.checkbox_id)</string>
+    <string name="answer_2c">EditText name = findViewbyId (R.id.some_key)</string>
+    <string name="answer_2d">ImageView imageViewName = (ImageView) findViewById (R.drawable.pic_name)</string>
+    <string name="question_3_text">3. What is the default text that is displayed on the screen when setting up a new AndroidStudio project?</string>
+    <string name="answer_3">Type answer and then tap to evaluate</string>
+    <string name="question_4_text">4. What would be the best name of a concept describing high-achieving individuals who are marked by an inability to internalize their accomplishments and a persistent fear of being exposed as a "fraud"?</string>
+    <string name="answer_4a">Dyslexia</string>
+    <string name="answer_4b">Autistm</string>
+    <string name="answer_4c">Impostor syndrome</string>
+    <string name="question_5_text">5. What data type should be declared for a variable that can store only two possible values (such as true or false)?</string>
+    <string name="answer_5a">boolean</string>
+    <string name="answer_5b">int</string>
+    <string name="answer_5c">String</string>
+    <string name="submit_button_text">Submit</string>
+    <string name="reset_button_text">Reset</string>
+    <string name="correct_message">Congratulation! Your answer is correct!</string>
+    <string name="short_correct_message">Correct</string>
+    <string name="incorrect_message">Sorry! Your answer is incorrect. Try again!</string>
+    <string name="short_incorrect_message">Incorrect</string>
+    <string name="almost">You are on the right track, but this question has more than one correct answer</string>
+    <string name="partial">Partial answer</string>
+    <string name="unanswered">Unanswered question</string>
+    <string name="answerQuestion3">hello world!</string>
+
+</resources>
