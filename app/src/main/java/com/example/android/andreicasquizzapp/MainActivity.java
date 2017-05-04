@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Declare global variables
      */
-    int actualScore = 0;
+    int actualScore;
     int maxScore = 5;
     String questionOne;
     String questionTwo;
@@ -42,10 +42,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /**This method evaluates the answer for the first question in the quiz
+    /**
+     * This method evaluates the answer for the first question in the quiz
      * in order to display a short message showing the user whether the selected answer
      * is correct or incorrect. It is activated once a radio button is selected.
-     * @param myView - the actual radio button selected by user
+     *
+     * @param myView      - the actual radio button selected by user
      * @param questionOne - string is used to record whether the selected
      *                    answer is correct or incorrect; used in composing a summary
      *                    to be emailed to the user in the getQuizResults method below
@@ -70,12 +72,13 @@ public class MainActivity extends AppCompatActivity {
             questionOne = getText(short_incorrect_message).toString();
             return;
         }
-
-
     }
-    /**This method evaluates the answer for the second question in the quiz
+
+    /**
+     * This method evaluates the answer for the second question in the quiz
      * in order to display a short message showing the user whether the selected answer
      * is correct or incorrect. It is activated once a checkbox is selected.
+     *
      * @param questionTwo - string is used to record whether the selected
      *                    answer is correct or incorrect; used in composing a summary
      *                    to be emailed to the user in the getQuizResults method below
@@ -114,16 +117,17 @@ public class MainActivity extends AppCompatActivity {
             questionTwo = getText(short_incorrect_message).toString();
             return;
         }
-
-
     }
-    /**This method evaluates the answer for the third question in the quiz
+
+    /**
+     * This method evaluates the answer for the third question in the quiz
      * in order to display a short message showing the user whether the selected answer
      * is correct or incorrect. It is activated when the user finishes typing in the answer
      * and taps the EditText View.
+     *
      * @param questionThree - string is used to record whether the selected
-     *                    answer is correct or incorrect; used in composing a summary
-     *                    to be emailed to the user in the getQuizResults method below
+     *                      answer is correct or incorrect; used in composing a summary
+     *                      to be emailed to the user in the getQuizResults method below
      */
     public void evaluateQuestionThree(View myView) {
         /** correct answer is equal to value saved in string resource */
@@ -139,14 +143,16 @@ public class MainActivity extends AppCompatActivity {
             questionThree = getText(short_incorrect_message).toString();
             return;
         }
-
     }
-    /**This method evaluates the answer for the fourth question in the quiz
+
+    /**
+     * This method evaluates the answer for the fourth question in the quiz
      * in order to display a short message showing the user whether the selected answer
      * is correct or incorrect. It is activated once a checkbox is selected.
+     *
      * @param questionFour - string is used to record whether the selected
-     *                    answer is correct or incorrect; used in composing a summary
-     *                    to be emailed to the user in the getQuizResults method below
+     *                     answer is correct or incorrect; used in composing a summary
+     *                     to be emailed to the user in the getQuizResults method below
      */
     public void evaluateQuestionFour(View myView) {
         /**answer 4c is the correct answer*/
@@ -168,15 +174,16 @@ public class MainActivity extends AppCompatActivity {
             questionFour = getText(short_incorrect_message).toString();
             return;
         }
-
-
     }
-    /**This method evaluates the answer for the second question in the quiz
+
+    /**
+     * This method evaluates the answer for the second question in the quiz
      * in order to display a short message showing the user whether the selected answer
      * is correct or incorrect. It is activated once a checkbox is selected.
+     *
      * @param questionFive - string is used to record whether the selected
-     *                    answer is correct or incorrect; used in composing a summary
-     *                    to be emailed to the user in the getQuizResults method below
+     *                     answer is correct or incorrect; used in composing a summary
+     *                     to be emailed to the user in the getQuizResults method below
      */
     public void evaluateQuestionFive(View myView) {
         /**answer 5a is the correct answer*/
@@ -198,12 +205,11 @@ public class MainActivity extends AppCompatActivity {
             questionFive = getText(short_incorrect_message).toString();
             return;
         }
-
-
     }
 
     /**
      * This method calculates the actual points accumulated by the quiz taker.
+     *
      * @param actualScore - integer storing the value of the points accumulated.
      *                    Each question answered correctly adds one point to the
      *                    actual score. There are no points granted for questions
@@ -220,8 +226,11 @@ public class MainActivity extends AppCompatActivity {
 
         CheckBox answer2aCheckBox = (CheckBox) findViewById(R.id.answer2a_checkbox);
         CheckBox answer2dCheckBox = (CheckBox) findViewById(R.id.answer2d_checkbox);
+        CheckBox answer2bCheckBox = (CheckBox) findViewById(R.id.answer2b_checkbox);
+        CheckBox answer2cCheckBox = (CheckBox) findViewById(R.id.answer2c_checkbox);
 
-        if (answer2aCheckBox.isChecked() && answer2dCheckBox.isChecked()) {
+        if (answer2aCheckBox.isChecked() && answer2dCheckBox.isChecked() &&
+                !answer2bCheckBox.isChecked() && !answer2cCheckBox.isChecked()) {
             actualScore += 1;
         }
 
@@ -242,7 +251,6 @@ public class MainActivity extends AppCompatActivity {
             actualScore += 1;
         }
         return actualScore;
-
     }
 
     /**
@@ -276,7 +284,6 @@ public class MainActivity extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
         toast.show();
-
     }
 
     /**
@@ -308,7 +315,6 @@ public class MainActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
-
     }
 
     /**
