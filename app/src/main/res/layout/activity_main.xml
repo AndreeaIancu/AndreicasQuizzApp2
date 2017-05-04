@@ -4,21 +4,21 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F3E5F5"
     android:orientation="vertical"
-    tools:context="com.example.android.andreicasquizzapp.MainActivity"
-    android:background="#F3E5F5">
+    tools:context="com.example.android.andreicasquizzapp.MainActivity">
 
     <TextView
+        style="@style/welcome_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        style="@style/welcome_message"/>
+        android:text="@string/welcome" />
     <TextView
+        style="@style/description_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/description"
-        style="@style/description_style"
-        android:gravity="left"/>
+        android:gravity="left"
+        android:text="@string/description" />
     <EditText
         android:id="@+id/name_field"
         android:layout_width="match_parent"
@@ -53,27 +53,27 @@
 
                 <RadioButton
                     android:id="@+id/answer1a"
+                    style="@style/radiobutton_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="evaluateQuestionOne"
-                    android:text="@string/answer_1a"
-                    style="@style/radiobutton_style"/>
+                    android:text="@string/answer_1a" />
 
                 <RadioButton
                     android:id="@+id/answer1b"
+                    style="@style/radiobutton_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="evaluateQuestionOne"
-                    android:text="@string/answer_1b"
-                    style="@style/radiobutton_style"/>
+                    android:text="@string/answer_1b" />
 
                 <RadioButton
                     android:id="@+id/answer1c"
+                    style="@style/radiobutton_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="evaluateQuestionOne"
-                    android:text="@string/answer_1c"
-                    style="@style/radiobutton_style"/>
+                    android:text="@string/answer_1c" />
 
             </RadioGroup>
 
@@ -86,35 +86,35 @@
 
             <CheckBox
                 android:id="@+id/answer2a_checkbox"
+                style="@style/checkbox_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="evaluateQuestionTwo"
-                android:text="@string/answer_2a"
-                style="@style/checkbox_style"/>
+                android:text="@string/answer_2a" />
 
             <CheckBox
                 android:id="@+id/answer2b_checkbox"
+                style="@style/checkbox_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="evaluateQuestionTwo"
-                android:text="@string/answer_2b"
-                style="@style/checkbox_style"/>
+                android:text="@string/answer_2b" />
 
             <CheckBox
                 android:id="@+id/answer2c_checkbox"
+                style="@style/checkbox_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="evaluateQuestionTwo"
-                android:text="@string/answer_2c"
-                style="@style/checkbox_style"/>
+                android:text="@string/answer_2c" />
 
             <CheckBox
                 android:id="@+id/answer2d_checkbox"
+                style="@style/checkbox_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="evaluateQuestionTwo"
-                android:text="@string/answer_2d"
-                style="@style/checkbox_style"/>
+                android:text="@string/answer_2d" />
 
 
             <TextView
@@ -122,26 +122,26 @@
                 style="@style/questionTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question_3_text"
-                android:paddingTop="8dp"/>
+                android:paddingTop="8dp"
+                android:text="@string/question_3_text" />
 
             <EditText
                 android:id="@+id/answer3_EdtTxt"
+                style="@style/radiobutton_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/answer_3"
                 android:inputType="text"
                 android:maxLines="1"
-                android:onClick="evaluateQuestionThree"
-                style="@style/radiobutton_style" />
+                android:onClick="evaluateQuestionThree" />
 
             <TextView
                 android:id="@+id/question_4"
                 style="@style/questionTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question_4_text"
-                android:paddingTop="8dp"/>
+                android:paddingTop="8dp"
+                android:text="@string/question_4_text" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -150,27 +150,27 @@
 
                 <RadioButton
                     android:id="@+id/answer4a"
+                    style="@style/radiobutton_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="evaluateQuestionFour"
-                    android:text="@string/answer_4a"
-                    style="@style/radiobutton_style"/>
+                    android:text="@string/answer_4a" />
 
                 <RadioButton
                     android:id="@+id/answer4b"
+                    style="@style/radiobutton_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="evaluateQuestionFour"
-                    android:text="@string/answer_4b"
-                    style="@style/radiobutton_style"/>
+                    android:text="@string/answer_4b" />
 
                 <RadioButton
                     android:id="@+id/answer4c"
+                    style="@style/radiobutton_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="evaluateQuestionFour"
-                    android:text="@string/answer_4c"
-                    style="@style/radiobutton_style"/>
+                    android:text="@string/answer_4c" />
 
             </RadioGroup>
 
@@ -189,27 +189,27 @@
 
                 <RadioButton
                     android:id="@+id/answer5a"
+                    style="@style/radiobutton_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="evaluateQuestionFive"
-                    android:text="@string/answer_5a"
-                    style="@style/radiobutton_style"/>
+                    android:text="@string/answer_5a" />
 
                 <RadioButton
                     android:id="@+id/answer5b"
+                    style="@style/radiobutton_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="evaluateQuestionFive"
-                    android:text="@string/answer_5b"
-                    style="@style/radiobutton_style"/>
+                    android:text="@string/answer_5b" />
 
                 <RadioButton
                     android:id="@+id/answer5c"
+                    style="@style/radiobutton_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="evaluateQuestionFive"
-                    android:text="@string/answer_5c"
-                    style="@style/radiobutton_style"/>
+                    android:text="@string/answer_5c" />
 
             </RadioGroup>
 
@@ -219,23 +219,33 @@
                 android:orientation="horizontal">
 
                 <Button
+                    style="@style/button_style"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:onClick="getQuizResults"
-                    android:text="@string/submit_button_text"
-                    style="@style/button_style"/>
+                    android:layout_weight="1"
+                    android:onClick="grade"
+                    android:text="@string/grade" />
 
                 <Button
+                    style="@style/button_style"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:onClick="reset"
-                    android:text="@string/reset_button_text"
-                    style="@style/button_style"/>
+                    android:layout_weight="1"
+                    android:onClick="sendQuizResults"
+                    android:text="@string/submit_button_text" />
+
+
             </LinearLayout>
+
+            <Button
+                style="@style/button_style"
+                android:layout_width="@dimen/reset_button_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="reset"
+                android:text="@string/reset_button_text" />
 
         </LinearLayout>
 

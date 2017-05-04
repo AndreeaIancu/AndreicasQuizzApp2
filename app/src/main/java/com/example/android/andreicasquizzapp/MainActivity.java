@@ -242,25 +242,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the SUBMIT button is pressed.
-     * It obtains the score and puts together a summary of the quiz results
-     * in order for the user to send this information via e-mail.
+     * This method is called when the GRADE button is pressed.
+     * It obtains the score, puts together a summary of the quiz results
+     * and displays the information in a toast message.
      */
-    public void getQuizResults(View view) {
+    public void grade(View view) {
         EditText quizTakerEdtTxt = (EditText) findViewById(R.id.name_field);
         String quizTakerName = quizTakerEdtTxt.getText().toString();
-        String emailSubjectLine = "Quiz Results For  " + quizTakerName;
 
         actualScore = calculateScore(actualScore);
 
-        String quizResults = "Dear " + quizTakerName + "," + "\nThank you for taking this quiz. \nYour quiz results are below:";
-        quizResults += "\nYou answered " + actualScore + " questions out of " + maxScore + " correctly";
-        quizResults += "\nPlease find a summary of your answers below:";
-        quizResults += "\nQuestion 1: " + questionOne;
-        quizResults += "\nQuestion 2: " + questionTwo;
-        quizResults += "\nQuestion 3: " + questionThree;
-        quizResults += "\nQuestion 4: " + questionFour;
-        quizResults += "\nQuestion 5: " + questionFive;
+        String quizResults = getString(R.string.you_answered) + actualScore + getString(R.string.questions_out_of) + maxScore + getString(R.string.correctly);
+        quizResults += getString(R.string.answer_summary);
+        quizResults += getString(R.string.q1) + questionOne;
+        quizResults += getString(R.string.q2) + questionTwo;
+        quizResults += getString(R.string.q3) + questionThree;
+        quizResults += getString(R.string.q4) + questionFour;
+        quizResults += getString(R.string.q5) + questionFive;
+
+        Toast.makeText(this, quizResults, Toast.LENGTH_LONG).show();
+
+    }
+
+    /**
+     * This method is called when the EMAIL RESULTS button is pressed.
+     * It obtains the score and puts together a summary of the quiz results
+     * in order for the user to send this information via e-mail.
+     */
+    public void sendQuizResults(View view) {
+        EditText quizTakerEdtTxt = (EditText) findViewById(R.id.name_field);
+        String quizTakerName = quizTakerEdtTxt.getText().toString();
+        String emailSubjectLine = getString(R.string.subject_line) + quizTakerName;
+
+        actualScore = calculateScore(actualScore);
+
+        String quizResults = getString(R.string.dear) + quizTakerName + "," + getString(R.string.thank_you_message);
+        quizResults += getString(R.string.you_answered) + actualScore + getString(R.string.questions_out_of) + maxScore + getString(R.string.correctly);
+        quizResults += getString(R.string.answer_summary);
+        quizResults += getString(R.string.q1) + questionOne;
+        quizResults += getString(R.string.q2) + questionTwo;
+        quizResults += getString(R.string.q3) + questionThree;
+        quizResults += getString(R.string.q4) + questionFour;
+        quizResults += getString(R.string.q5) + questionFive;
 
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this

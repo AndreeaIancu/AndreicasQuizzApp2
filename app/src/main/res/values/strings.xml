@@ -22,7 +22,7 @@
     <string name="answer_5a">boolean</string>
     <string name="answer_5b">int</string>
     <string name="answer_5c">String</string>
-    <string name="submit_button_text">Submit</string>
+    <string name="submit_button_text">Email results</string>
     <string name="reset_button_text">Reset</string>
     <string name="correct_message">Congratulation! Your answer is correct!</string>
     <string name="short_correct_message">Correct</string>
@@ -32,5 +32,18 @@
     <string name="partial">Partial answer</string>
     <string name="unanswered">Unanswered question</string>
     <string name="answerQuestion3">hello world!</string>
+    <string name="grade">grade</string>
+    <string name="you_answered">"\nYou answered "</string>
+    <string name="questions_out_of">" questions out of "</string>
+    <string name="correctly">" correctly"</string>
+    <string name="answer_summary">\nPlease find a summary of your answers below:</string>
+    <string name="q1">"\nQuestion 1: "</string>
+    <string name="q2">"\nQuestion 2: "</string>
+    <string name="q3">"\nQuestion 3: "</string>
+    <string name="q4">"\nQuestion 4: "</string>
+    <string name="q5">"\nQuestion 5: "</string>
+    <string name="dear">"Dear "</string>
+    <string name="thank_you_message">\nThank you for taking this quiz. \nYour quiz results are below:</string>
+    <string name="subject_line">"Quiz Results For  "</string>
 
 </resources>
